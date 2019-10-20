@@ -1,0 +1,3 @@
+-- Basic Chat Commands made by MDH Holdings
+
+AddEventHandler('chatMessage',function(a,b,c)sm=stringsplit(c," ")if sm[1]=="/ooc"then CancelEvent()TriggerClientEvent('chatMessage',-1,"^6OOC | ^7"..b,{128,128,128},string.sub(c,5))end;if sm[1]=="/me"then CancelEvent()TriggerClientEvent('chatMessage',-1,"^3Me | ^7"..b,{128,128,128},string.sub(c,5))end;if sm[1]=="/911"then CancelEvent()TriggerClientEvent('chatMessage',-1,"^8(911) | ^7"..b,{255,255,255},string.sub(c,5))end;if sm[1]=="/news"then CancelEvent()TriggerClientEvent("chatMessage",-1,"^3News",{255,255,255},string.sub(c,6))end end)function stringsplit(d,e)if e==nil then e="%s"end;local f={}i=1;for g in string.gmatch(d,"([^"..e.."]+)")do f[i]=g;i=i+1 end;return f end
